@@ -31,10 +31,10 @@ async def on_message(message):
             print_first = "시 끄 러 워 ^^"
         else :
             print_first = "[MINT 감옥] JR님의 형량을 " + str(plus) + "년 추가했습니다! ("
-        print(plus // 10)
-        for i in range (0, plus // 10) :
-            print_first += "짝"
-        print_first += ")"
+            print(plus // 10)
+            for i in range (0, plus // 10) :
+                print_first += "짝"
+            print_first += ")"
 
         embed = discord.Embed(title="축하드립니다.", description=print_first, color=0x63A2FF)
         await message.channel.send(embed=embed)
@@ -53,7 +53,7 @@ async def on_message(message):
 
         # await message.channel.send(print_first)
 
-    if message.content.startswith("!탈퇴") or message.content.startswith("!퇴") or message.content.startswith("!탈옥"):
+    if message.content.startswith("!탈퇴") or message.content.startswith("!퇴") or message.content.startswith("!탈옥") or message.content.startswith("!탈주"):
         embed = discord.Embed(title="불가능합니다.", description="테마 만드세요.", color=0x63A2FF)
         await message.channel.send(embed=embed)
 
