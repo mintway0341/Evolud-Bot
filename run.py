@@ -21,10 +21,16 @@ async def on_message(message):
     channel = message.channel  # channel
 
     if message.content.startswith("!형량추가"):
-        plus = random.randrange(1,1500)
+        plus = random.randrange(1,1501)
 
-
-        print_first = "[MINT 감옥] JR님의 형량을 " + str(plus) + "년 추가했습니다! ("
+        if plus < 51 :
+            print_first = "귀 찮 아 ^^"
+        elif plus < 101 :
+            print_first = "그 만 불 러 ^^"
+        elif plus < 151:
+            print_first = "시 끄 러 워 ^^"
+        else :
+            print_first = "[MINT 감옥] JR님의 형량을 " + str(plus) + "년 추가했습니다! ("
         for i in range (0, plus) :
             print_first += "짝"
         print_first += ")"
@@ -46,12 +52,23 @@ async def on_message(message):
 
         # await message.channel.send(print_first)
 
-    if message.content.startswith("!탈퇴"):
+    if message.content.startswith("!탈퇴") or message.content.startswith("!퇴") or message.content.startswith("!탈옥"):
         embed = discord.Embed(title="불가능합니다.", description="테마 만드세요.", color=0x63A2FF)
         await message.channel.send(embed=embed)
 
     if message.content.startswith("!인피케이"):
-        embed = discord.Embed(title="임의의 ε>0 에 대하여...", description="수학 공부 중입니다.", color=0x63A2FF)
+        rand = random.randrange(1, 101)
+        if rand % 5 == 0:
+            embed = discord.Embed(title="임의의 ε>0 에 대하여...", description="수학 공부 중입니다.", color=0x63A2FF)
+        elif rand % 5 == 1:
+            embed = discord.Embed(title="Q.E.D.", description="수학 공부 중입니다.", color=0x63A2FF)
+        elif rand % 5 == 2:
+            embed = discord.Embed(title="이를 적기에는 여백이 부족하다.", description="수학 공부 중입니다.", color=0x63A2FF)
+        elif rand % 5 == 3:
+            embed = discord.Embed(title="리만 제타 함수 ζ(0)을 만족하는...", description="수학 공부 중입니다.", color=0x63A2FF)
+        else:
+            embed = discord.Embed(title="S가 내적공간 V의 부분집합일때...", description="수학 공부 중입니다.", color=0x63A2FF)
+        await message.channel.send(embed=embed)
         await message.channel.send(embed=embed)
 
     if message.content.startswith("!인피케잌"):
@@ -64,6 +81,20 @@ async def on_message(message):
             embed = discord.Embed(title="아이스크림 케잌", description="🍦🍰", color=0x63A2FF)
         else :
             embed = discord.Embed(title="초코 케잌", description="🍫🍰", color=0x63A2FF)
+        await message.channel.send(embed=embed)
+
+    if message.content.startswith("!민트웨이"):
+        rand = random.randrange(1, 101)
+        if rand % 5 == 0 :
+            embed = discord.Embed(title="나는야 앱등이", description="iPhone📱", color=0x63A2FF)
+        elif rand % 5 == 1 :
+            embed = discord.Embed(title="👨‍💻", description="디스코드 봇 제작중입니다.", color=0x63A2FF)
+        elif rand % 5 == 2 :
+            embed = discord.Embed(title="🍎", description="Developer at Apple in California", color=0x63A2FF)
+        elif rand % 5 == 3:
+            embed = discord.Embed(title="✏️", description="심층면접/논술 공부 중입니다.", color=0x63A2FF)
+        else :
+            embed = discord.Embed(title="✏️", description="선형대수학 공부 중입니다.", color=0x63A2FF)
         await message.channel.send(embed=embed)
         
 access_token = os.environ["BOT_TOKEN"]
