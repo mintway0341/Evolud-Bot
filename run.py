@@ -43,11 +43,11 @@ async def on_message(message):
         plus = random.randrange(1,1501)
 
         if plus < 501 :
-            print_first = "귀 찮 아 ^^"
+            embed = discord.Embed(title="오류", description="귀 찮 아 ^^", color=0x63A2FF)
         elif plus < 101 :
-            print_first = "그 만 불 러 ^^"
+            embed = discord.Embed(title="오류", description="그 만 불 러 ^^", color=0x63A2FF)
         elif plus < 151:
-            print_first = "시 끄 러 워 ^^"
+            embed = discord.Embed(title="오류", description="시 끄 러 워 ^^", color=0x63A2FF)
         else :
             print_first = "[MINT 감옥] JR님의 형량을 " + str(plus) + "년 추가했습니다! ("
             print(plus // 10)
