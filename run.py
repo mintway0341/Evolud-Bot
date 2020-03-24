@@ -20,7 +20,7 @@ async def on_message(message):
     id = message.author.id
     channel = message.channel  # channel
 
-    if message.content.startswith("!노동반대"):
+    if message.content.startswith("!노동"):
         embed = discord.Embed(title="좋은 마음가짐이에요.", description="테마 만드세요.", color=0x63A2FF)
         await message.channel.send(embed=embed)
         
