@@ -20,10 +20,6 @@ async def on_message(message):
     id = message.author.id
     channel = message.channel  # channel
 
-    if message.content.startswith("!노동"):
-        embed = discord.Embed(title="좋은 마음가짐이에요.", description="테마 만드세요.", color=0x63A2FF)
-        await message.channel.send(embed=embed)
-        
     if message.content.startswith("!노동반대"):
         plus = random.randrange(1, 1501)
         print_first = "[MINT 감옥] JR님의 형량을 " + str(plus) + "년 추가했습니다! ("
@@ -35,10 +31,14 @@ async def on_message(message):
         embed = discord.Embed(title="노동반대하면 안됩니다.", description=print_first, color=0x63A2FF)
         await message.channel.send(embed=embed)
 
+    elif message.content.startswith("!노동"):
+        embed = discord.Embed(title="좋은 마음가짐이에요.", description="테마 만드세요.", color=0x63A2FF)
+        await message.channel.send(embed=embed)
+        
     if message.content.startswith("!형량추가"):
         plus = random.randrange(1,1501)
 
-        if plus < 51 :
+        if plus < 501 :
             print_first = "귀 찮 아 ^^"
         elif plus < 101 :
             print_first = "그 만 불 러 ^^"
