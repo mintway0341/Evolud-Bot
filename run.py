@@ -69,7 +69,6 @@ async def on_message(message):
         else:
             embed = discord.Embed(title="S가 내적공간 V의 부분집합일때...", description="수학 공부 중입니다.", color=0x63A2FF)
         await message.channel.send(embed=embed)
-        await message.channel.send(embed=embed)
 
     if message.content.startswith("!인피케잌"):
         rand = random.randrange(1, 101)
@@ -86,7 +85,7 @@ async def on_message(message):
     if message.content.startswith("!민트웨이"):
         rand = random.randrange(1, 101)
         if rand % 5 == 0 :
-            embed = discord.Embed(title="나는야 앱등이", description="iPhone📱", color=0x63A2FF)
+            embed = discord.Embed(title="나는야 앱등이", description="I like macOS", color=0x63A2FF)
         elif rand % 5 == 1 :
             embed = discord.Embed(title="👨‍💻", description="디스코드 봇 제작중입니다.", color=0x63A2FF)
         elif rand % 5 == 2 :
