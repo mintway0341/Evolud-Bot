@@ -31,10 +31,10 @@ async def on_message(message):
         embed = discord.Embed(title="노동반대하면 안됩니다.", description=print_first, color=0x63A2FF)
         await message.channel.send(embed=embed)
 
-    elif message.content.startswith("!노동"):
+    elif message.content == "노동":
         embed = discord.Embed(title="좋은 마음가짐이에요.", description="테마 만드세요.", color=0x63A2FF)
         await message.channel.send(embed=embed)
-        
+
     if message.content.startswith("!형량추가"):
         plus = random.randrange(1,1501)
 
