@@ -1,6 +1,5 @@
 import discord
 import random
-import os
 
 client = discord.Client()
 
@@ -48,6 +47,22 @@ async def on_message(message):
 
     if message.content.startswith("!탈퇴"):
         embed = discord.Embed(title="불가능합니다.", description="테마 만드세요.", color=0x63A2FF)
+        await message.channel.send(embed=embed)
+
+    if message.content.startswith("!인피케이"):
+        embed = discord.Embed(title="임의의 ε>0 에 대하여...", description="수학 공부 중입니다.", color=0x63A2FF)
+        await message.channel.send(embed=embed)
+
+    if message.content.startswith("!인피케잌"):
+        rand = random.randrange(1, 101)
+        if rand % 4 == 0 :
+            embed = discord.Embed(title="고구마 케잌", description="🍠🍰", color=0x63A2FF)
+        elif rand % 4 == 1 :
+            embed = discord.Embed(title="딸기 케잌", description="🍓🍰", color=0x63A2FF)
+        elif rand % 4 == 2 :
+            embed = discord.Embed(title="아이스크림 케잌", description="🍦🍰", color=0x63A2FF)
+        else :
+            embed = discord.Embed(title="초코 케잌", description="🍫🍰", color=0x63A2FF)
         await message.channel.send(embed=embed)
         
 access_token = os.environ["BOT_TOKEN"]
