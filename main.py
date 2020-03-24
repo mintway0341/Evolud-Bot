@@ -1,5 +1,6 @@
 import discord
 import random
+import os
 
 client = discord.Client()
 
@@ -48,5 +49,6 @@ async def on_message(message):
     if message.content.startswith("!탈퇴"):
         embed = discord.Embed(title="불가능합니다.", description="테마 만드세요.", color=0x63A2FF)
         await message.channel.send(embed=embed)
-
-client.run("NjkxODkzNzQxNDQyNjk1MTg4.XnmmeQ.KWKSenH_iAOp_hfh14FqZRo4PhY")
+        
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
