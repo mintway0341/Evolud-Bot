@@ -20,6 +20,9 @@ async def on_message(message):
     id = message.author.id
     channel = message.channel  # channel
 
+    if message.content.startswith("!알려주세요"):
+        embed = discord.Embed(title="Evolud Bot 사용방법", description="!노동 / !노동반대 / !노동싫어 / !형량추가 / !형량삭감 / \n!탈퇴 / !퇴사 / !탈옥 / !탈주 / !사망 / !인피케이 / !인피케잌 / !민트웨이", color=0x63A2FF)
+        await message.channel.send(embed=embed)
 
     if message.content.startswith("!노동반대") or message.content.startswith("!노동싫어"):
         plus = random.randrange(1, 1501)
