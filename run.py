@@ -18,7 +18,7 @@ async def on_message(message):
         return None
 
     id = message.author.id
-    channel = message.channel  # channel
+    channel = message.channel
 
     if message.content.startswith("!알려주세요"):
         embed = discord.Embed(title="Evolud Bot 사용방법", description="!노동 / !노동반대 / !노동싫어 / !형량추가 / !형량삭감 / \n!탈퇴 / !퇴사 / !탈옥 / !탈주 / !사망 / !인피케이 / !인피케잌 / !민트웨이", color=0x63A2FF)
@@ -119,13 +119,13 @@ async def on_message(message):
     if message.content.startswith("!구름"):
         rand = random.randrange(1, 101)
         if rand % 5 == 0:
-            embed = discord.Embed(title="ZZZ", description="잠만", color=0x63A2FF)
+            embed = discord.Embed(title="ZZZ", description="잠만보", color=0x63A2FF)
         elif rand % 5 == 1:
-            embed = discord.Embed(title="👨‍💻", description="디스코드 봇 제작중입니다.", color=0x63A2FF)
+            embed = discord.Embed(title="ZZZ", description="잠만보", color=0x63A2FF)
         elif rand % 5 == 2:
-            embed = discord.Embed(title="🍎", description="Developer at Apple in California", color=0x63A2FF)
+            embed = discord.Embed(title="ZZZ", description="잠만보", color=0x63A2FF)
         elif rand % 5 == 3:
-            embed = discord.Embed(title="✏️", description="심층면접/논술 공부 중입니다.", color=0x63A2FF)
+            embed = discord.Embed(title="ZZZ", description="잠만보", color=0x63A2FF)
         else:
             embed = discord.Embed(title="✏️", description="선형대수학 공부 중입니다.", color=0x63A2FF)
         await message.channel.send(embed=embed)
