@@ -21,8 +21,8 @@ async def on_message(message):
     channel = message.channel
 
     if message.content.startswith("!알려주세요"):
-        embed = discord.Embed(title="Evolud Bot 사용방법", description="!노동 / !노동반대 / !노동싫어 / !형량추가 / !형량삭감 / \n!탈퇴 / !퇴사 / !탈옥 / !탈주 / !사망 / !인피케이 / \n!인피케잌 / !민트웨이 / !구름", color=0x63A2FF)
-        await message.channel.send(embed=embed)
+    embed = discord.Embed(title="Evolud Bot 사용방법", description="!노동 / !노동반대 / !노동싫어 / !형량추가 / !형량삭감 / \n!탈퇴 / !퇴사 / !탈옥 / !탈주 / !사망 / \n!인피케이 / !infikei / !Infikei / !INFIKEI / \n!인피케잌 / !inficake / !Inficake / !INFICAKE / \n!민트웨이 / !mintway / !Mintway / !MintWay / !MINTWAY / \n!구름 / !cloud / !Cloud / !CLOUD / \n!jr / !Jr / !JR / !jwr / !JwR / !JWR", color=0x63A2FF)
+    await message.channel.send(embed=embed)
 
     if message.content.startswith("!노동반대") or message.content.startswith("!노동싫어"):
         plus = random.randrange(1, 1501)
@@ -76,7 +76,7 @@ async def on_message(message):
         embed = discord.Embed(title="불가능합니다.", description="테마 만드세요.", color=0x63A2FF)
         await message.channel.send(embed=embed)
 
-    if message.content.startswith("!인피케이"):
+    if message.content.startswith("!인피케이") or message.content.startswith("!infikei") or message.content.startswith("!Infikei") or message.content.startswith("!INFIKEI"):
         rand = random.randrange(1, 101)
         if rand % 5 == 0:
             embed = discord.Embed(title="임의의 ε>0 에 대하여...", description="수학 공부 중입니다.", color=0x63A2FF)
@@ -90,7 +90,7 @@ async def on_message(message):
             embed = discord.Embed(title="S가 내적공간 V의 부분집합일때...", description="수학 공부 중입니다.", color=0x63A2FF)
         await message.channel.send(embed=embed)
 
-    if message.content.startswith("!인피케잌"):
+    if message.content.startswith("!인피케잌") or message.content.startswith("!inficake") or message.content.startswith("!Inficake") or message.content.startswith("!INFICAKE"):
         rand = random.randrange(1, 101)
         if rand % 4 == 0 :
             embed = discord.Embed(title="고구마 케잌", description="🍠🍰", color=0x63A2FF)
@@ -102,7 +102,7 @@ async def on_message(message):
             embed = discord.Embed(title="초코 케잌", description="🍫🍰", color=0x63A2FF)
         await message.channel.send(embed=embed)
 
-    if message.content.startswith("!민트웨이") or message.content.startswith("!mintway"):
+    if message.content.startswith("!민트웨이") or message.content.startswith("!mintway") or message.content.startswith("!Mintway") or message.content.startswith("!MintWay") or message.content.startswith("!MINTWAY"):
         rand = random.randrange(1, 101)
         if rand % 5 == 0 :
             embed = discord.Embed(title="나는야 앱등이", description="I like macOS", color=0x63A2FF)
@@ -116,7 +116,7 @@ async def on_message(message):
             embed = discord.Embed(title="✏️", description="선형대수학 공부 중입니다.", color=0x63A2FF)
         await message.channel.send(embed=embed)
 
-    if message.content.startswith("!구름") or message.content.startswith("!cloud"):
+    if message.content.startswith("!구름") or message.content.startswith("!cloud") or message.content.startswith("!Cloud") or message.content.startswith("!CLOUD"):
         rand = random.randrange(1, 101)
         if rand % 4 == 0:
             embed = discord.Embed(title="ZZZ", description="잠만보", color=0x63A2FF)
@@ -128,7 +128,7 @@ async def on_message(message):
             embed = discord.Embed(title="!", description="닉네임 변경 중입니다.", color=0x63A2FF)
         await message.channel.send(embed=embed)
 
-    if message.content.startswith("!jr") or message.content.startswith("!jwr"):
+    if message.content.startswith("!jr") or message.content.startswith("!Jr") or message.content.startswith("!JR") or message.content.startswith("!jwr") or message.content.startswith("!JWR") or message.content.startswith("!JwR"):
         rand = random.randrange(1, 101)
         if rand % 4 == 0:
             embed = discord.Embed(title="노동 중", description="테마 제작은 재밌어요!!", color=0x63A2FF)
