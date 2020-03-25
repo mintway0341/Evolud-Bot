@@ -21,7 +21,16 @@ async def on_message(message):
     channel = message.channel
 
     if message.content.startswith("!알려주세요"):
-        embed = discord.Embed(title="Evolud Bot 사용방법", description="!노동 / !노동반대 / !노동싫어 / !형량추가 / !형량삭감 / \n!탈퇴 / !퇴사 / !탈옥 / !탈주 / !사망 / \n!인피케이 / !infikei / !Infikei / !INFIKEI / \n!인피케잌 / !inficake / !Inficake / !INFICAKE / \n!민트웨이 / !mintway / !Mintway / !MintWay / !MINTWAY / \n!구름 / !cloud / !Cloud / !CLOUD / \n!jr / !Jr / !JR / !jwr / !JwR / !JWR \n!제이알", color=0x63A2FF)
+        embed = discord.Embed(title="Evolud Bot 사용방법", description="", color=0x63A2FF)
+        embed.add_field(name="노동", value="`!노동`, `!노동반대`, `!노동싫어`", inline=True)
+        embed.add_field(name="형량", value="`!형량추가`, `!형량삭감`", inline=True)
+        embed.add_field(name="나쁜말", value="`!탈퇴`, `!퇴사`, `!탈옥`, `!탈주`, `!사망`", inline=True)
+        embed.add_field(name="노래", value="`!노래추천`", inline=True)
+        embed.add_field(name="멤버", value="`!인피케이`, `!infikei`, `!Infikei`, `!INFIKEI`, "
+                                         "`!인피케잌`, `!inficake`, `!Inficake`, `!INFICAKE`, "
+                                         "`!민트웨이`, `!mintway`, `!Mintway`, `!MintWay`, `!MINTWAY`, "
+                                         "`!구름`, `!cloud`, `!Cloud`, `!CLOUD`, "
+                                         "`!jr`, `!Jr`, `!JR`, `!jwr`, `!JwR`, `!JWR`, `!제이알`, `!화련`", inline=True)
         await message.channel.send(embed=embed)
 
     if message.content.startswith("!노동반대") or message.content.startswith("!노동싫어"):
@@ -140,6 +149,14 @@ async def on_message(message):
             embed = discord.Embed(title="앵그리 JwR", description="닉네임 그만 변경하세요ㅡㅡ", color=0x63A2FF)
         await message.channel.send(embed=embed)
 
+    if message.content.startswith("!제이알"):
+        embed = discord.Embed(title="KING OF KLCK", description="JR님 만세!!!!!", color=0x63A2FF)
+        await message.channel.send(embed=embed)
+
+    if message.content.startswith("!화련"):
+        embed = discord.Embed(title="고객 지원팀 보스", description="안녕하세요. 상담원 화련입니다.", color=0x63A2FF)
+        await message.channel.send(embed=embed)
+
     if message.content.startswith("!노래추천"):
         rand = random.randrange(1, 101)
         if rand % 4 == 0:
@@ -150,10 +167,6 @@ async def on_message(message):
             embed = discord.Embed(title="난난난난나", description="https://www.youtube.com/watch?v=QUXKib-jfEM", color=0x63A2FF)
         else:
             embed = discord.Embed(title="YEEEEEEEEE", description="https://www.youtube.com/watch?v=q6EoRBvdVPQ", color=0x63A2FF)
-        await message.channel.send(embed=embed)
-
-    if message.content.startswith("!제이알"):
-        embed = discord.Embed(title="KING OF KLCK", description="JR님 만세!!!!!", color=0x63A2FF)
         await message.channel.send(embed=embed)
         
 access_token = os.environ["BOT_TOKEN"]
