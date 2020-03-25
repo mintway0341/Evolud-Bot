@@ -139,6 +139,18 @@ async def on_message(message):
         else:
             embed = discord.Embed(title="앵그리 JwR", description="닉네임 그만 변경하세요ㅡㅡ", color=0x63A2FF)
         await message.channel.send(embed=embed)
+
+    if message.content.startswith("!노래추천"):
+        rand = random.randrange(1, 101)
+        if rand % 4 == 0:
+            embed = discord.Embed(title="엪취리칠", description="https://www.youtube.com/watch?v=Zyi9QUB-fyo&list=PLzCxunOM5WFLNCSF0UEHZqFJJlmdeL71S&index=34", color=0x63A2FF)
+        elif rand % 4 == 1:
+            embed = discord.Embed(title="노동하세요", description="https://www.youtube.com/watch?v=TpPwI_Lo0YY", color=0x63A2FF)
+        elif rand % 4 == 2:
+            embed = discord.Embed(title="난난난난나", description="https://www.youtube.com/watch?v=QUXKib-jfEM", color=0x63A2FF)
+        else:
+            embed = discord.Embed(title="YEEEEEEEEE", description="https://www.youtube.com/watch?v=q6EoRBvdVPQ", color=0x63A2FF)
+        await message.channel.send(embed=embed)
         
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
