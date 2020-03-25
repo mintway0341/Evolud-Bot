@@ -118,16 +118,14 @@ async def on_message(message):
 
     if message.content.startswith("!구름"):
         rand = random.randrange(1, 101)
-        if rand % 5 == 0:
+        if rand % 4 == 0:
             embed = discord.Embed(title="ZZZ", description="잠만보", color=0x63A2FF)
-        elif rand % 5 == 1:
-            embed = discord.Embed(title="ZZZ", description="잠만보", color=0x63A2FF)
-        elif rand % 5 == 2:
-            embed = discord.Embed(title="ZZZ", description="잠만보", color=0x63A2FF)
-        elif rand % 5 == 3:
-            embed = discord.Embed(title="ZZZ", description="잠만보", color=0x63A2FF)
+        elif rand % 4 == 1:
+            embed = discord.Embed(title="ZZZZZZZZ", description="잠만보", color=0x63A2FF)
+        elif rand % 4 == 2:
+            embed = discord.Embed(title="몽실몽실", description="CLOUD UX 2020", color=0x63A2FF)
         else:
-            embed = discord.Embed(title="✏️", description="선형대수학 공부 중입니다.", color=0x63A2FF)
+            embed = discord.Embed(title="!", description="닉네임 변경 중입니다.", color=0x63A2FF)
         await message.channel.send(embed=embed)
         
 access_token = os.environ["BOT_TOKEN"]
