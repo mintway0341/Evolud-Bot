@@ -153,7 +153,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
     if message.content.startswith("!제이알"):
-        embed = discord.Embed(title="KING OF KLCK", description="JR님 만세!!!!!")
+        embed = discord.Embed(title="KING OF KLCK", description="JR님 만세!!!!!", color=0x63A2FF)
         await message.channel.send(embed=embed)
         
 access_token = os.environ["BOT_TOKEN"]
