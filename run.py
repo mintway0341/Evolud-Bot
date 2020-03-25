@@ -102,7 +102,7 @@ async def on_message(message):
             embed = discord.Embed(title="초코 케잌", description="🍫🍰", color=0x63A2FF)
         await message.channel.send(embed=embed)
 
-    if message.content.startswith("!민트웨이"):
+    if message.content.startswith("!민트웨이") or message.content.startswith("!mintway"):
         rand = random.randrange(1, 101)
         if rand % 5 == 0 :
             embed = discord.Embed(title="나는야 앱등이", description="I like macOS", color=0x63A2FF)
@@ -116,7 +116,7 @@ async def on_message(message):
             embed = discord.Embed(title="✏️", description="선형대수학 공부 중입니다.", color=0x63A2FF)
         await message.channel.send(embed=embed)
 
-    if message.content.startswith("!구름"):
+    if message.content.startswith("!구름") or message.content.startswith("!cloud"):
         rand = random.randrange(1, 101)
         if rand % 4 == 0:
             embed = discord.Embed(title="ZZZ", description="잠만보", color=0x63A2FF)
@@ -126,6 +126,18 @@ async def on_message(message):
             embed = discord.Embed(title="몽실몽실", description="CLOUD UX 2020", color=0x63A2FF)
         else:
             embed = discord.Embed(title="!", description="닉네임 변경 중입니다.", color=0x63A2FF)
+        await message.channel.send(embed=embed)
+
+    if message.content.startswith("!jr") or message.content.startswith("!jwr"):
+        rand = random.randrange(1, 101)
+        if rand % 4 == 0:
+            embed = discord.Embed(title="노동 중", description="테마 제작은 재밌어요!!", color=0x63A2FF)
+        elif rand % 4 == 1:
+            embed = discord.Embed(title="나도 앱등이", description="에어팟 프로는 현존 최고의 코드리스 이어폰이죠.", color=0x63A2FF)
+        elif rand % 4 == 2:
+            embed = discord.Embed(title="고먐미", description="냥냥냥", color=0x63A2FF)
+        else:
+            embed = discord.Embed(title="앵그리 JwR", description="닉네임 그만 변경하세요ㅡㅡ", color=0x63A2FF)
         await message.channel.send(embed=embed)
         
 access_token = os.environ["BOT_TOKEN"]
