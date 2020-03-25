@@ -83,7 +83,7 @@ async def on_message(message):
         elif rand % 5 == 1:
             embed = discord.Embed(title="Q.E.D.", description="수학 공부 중입니다.", color=0x63A2FF)
         elif rand % 5 == 2:
-            embed = discord.Embed(title="이를 적기에는 여백이 부족하다.", description="수학 공부 중입니다.", color=0x63A2FF)
+            embed = discord.Embed(title="증명을 적기에는 여백이 부족하다.", description="수학 공부 중입니다.", color=0x63A2FF)
         elif rand % 5 == 3:
             embed = discord.Embed(title="리만 제타 함수 ζ(0)을 만족하는...", description="수학 공부 중입니다.", color=0x63A2FF)
         else:
